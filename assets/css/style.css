@@ -1,0 +1,78 @@
+/*Importing a google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-width: 100vh;
+    background: #DCDDDF;
+
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #e4ebee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent,  #3c02fa, #3c02fa);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(148,148,148,1) 26%, rgba(100,114,117,1) 100%); */
+}
+
+
+.box::after {
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent,  #3c02fa, #3c02fa);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  
+}
+
+
+.form  {
+    position: absolute;
+    inset: 3px;
+    z-index: 10;
+    background: #8a9092 ;
+    border-radius: 8px;
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
